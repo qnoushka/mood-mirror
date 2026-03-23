@@ -1,39 +1,60 @@
 # 🎭 AI Mood Mirror Pro
 
-A real-time AI-based mood detection system using OpenCV and MediaPipe with gesture-based controls.
+Real-time AI mood detection using OpenCV + MediaPipe with gesture-based controls.
+
+---
 
 ## 🚀 Features
+- 🎥 Live webcam emotion detection  
+- 😊 Detects smiling (with or without teeth)  
+- ✋ Gesture-based screenshot  
+- 📊 Confidence percentage + UI bar  
 
-* 🎥 Real-time webcam emotion detection
-* 😊 Smile detection (teeth + non-teeth)
-* ✋ Gesture-based screenshot (pinch fingers)
-* 📊 Confidence bar UI
-* 🎨 Clean overlay dashboard
-
-## 🧠 Tech Stack
-
-* Python
-* OpenCV
-* MediaPipe
+---
 
 ## 📸 Demo
+![Demo](screenshots/screenshot_1774297335.png)
 
-(Add screenshots here)
+---
 
 ## ⚡ Run Locally
-
 ```bash
 pip install -r requirements.txt
 python mood_mirror.py
 ```
 
+---
+
+## 💡 How It Works
+
+### 😊 Smile Detection Logic
+- Face landmarks are detected using MediaPipe Face Mesh  
+- Tracks mouth openness + curvature  
+- Detects both:
+  - 😊 teeth smile  
+  - 🙂 soft smile  
+
+---
+
+### ✋ Gesture-Based Screenshot
+- Uses thumb + index finger distance  
+- Pinch gesture 🤏 triggers screenshot  
+- Cooldown prevents spam  
+
+---
+
+### 📊 Confidence & UI Logic
+- Confidence based on strength of smile  
+- Displayed using progress bar  
+- UI overlay shows emotion + percentage  
+
+---
+
 ## 🎯 Controls
+- Press `q` → Exit  
+- Pinch fingers 🤏 → Screenshot  
 
-* Press `q` → Exit
-* Pinch fingers 🤏 → Take screenshot
+---
 
-## 💡 Future Improvements
-
-* Better emotion accuracy (Deep Learning model)
-* Multiple emotion detection
-* UI enhancements
+## 👩‍💻 Author
+Anoushka Nayak
